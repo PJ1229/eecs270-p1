@@ -7,7 +7,7 @@ module SEL1(s, a, b, f);
 	wire ns, as, bns;
 
 	not a1(ns, s);
-	and a2(ans, a, s);
+	and a2(as, a, s);
 	and a3(bns, b, ns);
 	or o(f, as, bns);
 	
