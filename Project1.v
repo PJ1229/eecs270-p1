@@ -7,8 +7,6 @@ module Project1(
 	);
 
 // instantiate selector module
-	Selector S(KEY, SW[6:0], SW[16:10], HEX0);
-
-	
+	Selector S(KEY, SW[6:0], SW[16:10], HEX0[6:0]);
 
 endmodule // Project1
