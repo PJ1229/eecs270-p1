@@ -5,6 +5,10 @@ module Project1(
 	output [6:0] LEDR,
 	output [6:0] HEX0
 	);
+
+// instantiate selector module
+	Selector S(LEDR, SW[6:0], SW[16:10], KEY);
+
 	
 
 endmodule // Project1

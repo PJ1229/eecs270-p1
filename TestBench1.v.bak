@@ -1,0 +1,21 @@
+// File Name: TestBench1.v
+`timescale 1ns / 1ns
+module TestBench1();
+	reg [3:3] KEY;	// KEY = 0 --> SW[6:0],KEY = 1 --> SW[16:10]
+	reg [17:0] SW;
+	wire [6:0] LEDR;
+	wire [6:0] HEX0;
+
+	Selector S(LEDR, SW[6:0], SW[16:10], KEY);
+
+	initial begin
+		SW = 3'b000; #5;
+		SW = 3'b001; #5;
+		SW = 3'b010; #5;
+		SW = 3'b011; #5;
+		SW = 3'b100; #5;
+		SW = 3'b101; #5;
+		SW = 3'b110; #5;
+		SW = 3'b111; #5;
+	end
+endmodule // TestBench1

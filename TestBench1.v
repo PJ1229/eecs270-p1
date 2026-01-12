@@ -5,6 +5,8 @@ module TestBench1();
 	reg [17:0] SW;
 	wire [6:0] LEDR;
 	wire [6:0] HEX0;
+
+	Selector S(HEX0, SW[6:0], SW[16:10], KEY);
 	
 
 	end
