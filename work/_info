@@ -10,98 +10,98 @@ z2
 cModel Technology
 dC:/vapps/intelFPGA_lite/20.1
 vProject1
-!s110 1768245395
+Z0 !s110 1768245969
 !i10b 1
-!s100 F29NLZlC=8f?>5]XG9XI=2
-Z0 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IzY]]5c8Ez_`56dj@HhHmA1
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dC:/Users/pekim/Downloads/eecs270-p1
-w1768245384
+!s100 mS0?S]lCUE;LOb^eYL=9X2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I1JmAkYo773`V2TG<aEPQm3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/pekim/Downloads/eecs270-p1
+w1768245963
 8C:/Users/pekim/Downloads/eecs270-p1/Project1.v
 FC:/Users/pekim/Downloads/eecs270-p1/Project1.v
-!i122 11
+!i122 13
 L0 2 13
-Z3 OV;L;2020.1;71
+Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1768245395.000000
+Z5 !s108 1768245969.000000
 !s107 C:/Users/pekim/Downloads/eecs270-p1/Project1.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/pekim/Downloads/eecs270-p1/Project1.v|
 !i113 1
-Z4 o-work work
-Z5 tCvgOpt 0
+Z6 o-work work
+Z7 tCvgOpt 0
 n@project1
 vSEL1
-!s110 1768245298
+R0
 !i10b 1
 !s100 CCDMol:Zia>3;RGcj5b650
-R0
-Ii0LH4dRW]^gWD6T3KjeTG3
 R1
+Ii0LH4dRW]^gWD6T3KjeTG3
 R2
+R3
 w1768243809
 8C:/Users/pekim/Downloads/eecs270-p1/SEL1.v
 FC:/Users/pekim/Downloads/eecs270-p1/SEL1.v
-!i122 9
+!i122 14
 L0 2 8
-R3
+R4
 r1
 !s85 0
 31
-!s108 1768245298.000000
+R5
 !s107 C:/Users/pekim/Downloads/eecs270-p1/SEL1.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/pekim/Downloads/eecs270-p1/SEL1.v|
 !i113 1
-R4
-R5
+R6
+R7
 n@s@e@l1
 vSelector
-!s110 1768245299
+!s110 1768245970
 !i10b 1
 !s100 cDnWE4BAM:gQLL08QIam]0
-R0
-IE?EiNnV;L`?E9T@5d@Yh10
 R1
+IE?EiNnV;L`?E9T@5d@Yh10
 R2
+R3
 w1768244988
 8C:/Users/pekim/Downloads/eecs270-p1/Selector.v
 FC:/Users/pekim/Downloads/eecs270-p1/Selector.v
-!i122 10
+!i122 15
 L0 3 12
-R3
+R4
 r1
 !s85 0
 31
-!s108 1768245299.000000
+!s108 1768245970.000000
 !s107 C:/Users/pekim/Downloads/eecs270-p1/Selector.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/pekim/Downloads/eecs270-p1/Selector.v|
 !i113 1
-R4
-R5
+R6
+R7
 n@selector
 vTestBench1
-!s110 1768245396
+!s110 1768247358
 !i10b 1
-!s100 1lEIJ5cYm01?6n=lJI>o80
-R0
-IO?7G?=R:ded`R84>jF]CB3
+!s100 ;U6TV3<L1LhWQH3fIJ;OU0
 R1
+I1[E;bb0`05=i=T^lL7gB[1
 R2
-w1768245392
+R3
+w1768247331
 8C:/Users/pekim/Downloads/eecs270-p1/TestBench1.v
 FC:/Users/pekim/Downloads/eecs270-p1/TestBench1.v
-!i122 12
-L0 3 19
-R3
+!i122 17
+L0 3 28
+R4
 r1
 !s85 0
 31
-!s108 1768245396.000000
+!s108 1768247358.000000
 !s107 C:/Users/pekim/Downloads/eecs270-p1/TestBench1.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/pekim/Downloads/eecs270-p1/TestBench1.v|
 !i113 1
-R4
-R5
+R6
+R7
 n@test@bench1

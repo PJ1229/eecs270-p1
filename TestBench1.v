@@ -1,13 +1,46 @@
-// File Name: TestBench1.v
-`timescale 1ns / 1ns
-module TestBench1();
-	reg [3:3] KEY;	// KEY = 0 --> SW[6:0],KEY = 1 --> SW[16:10]
-	reg [17:0] SW;
-	wire [6:0] LEDR;
-	wire [6:0] HEX0;
+`timescale 1ns/1ps
 
-	Selector S(HEX0, SW[6:0], SW[16:10], KEY);
-	
+module tb;
 
-	end
-endmodule // TestBench1
+    // Testbench signals
+    reg  [3:0] SW;
+    reg        KEY;
+
+    integer i;
+
+    // DUT instantiation (edit name/ports if needed)
+    // -----------------------------------------------
+    // example:
+    // my_module dut (
+    //     .SW(SW),
+    //     .KEY(KEY),
+    //     .OUT(OUT)
+    // );
+    // -----------------------------------------------
+
+    initial begin
+        // Initialize
+        SW  = 4'b0000;
+        KEY = 1'b0;
+        #5;
+
+        // Test KEY = 0
+        KEY = 1'b0;
+        for (i = 0; i < 16; i = i + 1) begin
+            SW = i[3:0];
+            #5;
+        end
+
+        // Test KEY = 1
+        KEY = 1'b1;
+        for (i = 0; i < 16; i = i + 1) begin
+            SW = i[3:0];
+            #5;
+        end
+
+        // End simulation
+        #10;
+        $stop;
+    end
+
+endmodule

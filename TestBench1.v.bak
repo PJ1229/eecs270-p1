@@ -6,16 +6,47 @@ module TestBench1();
 	wire [6:0] LEDR;
 	wire [6:0] HEX0;
 
-	Selector S(LEDR, SW[6:0], SW[16:10], KEY);
+	Selector S(KEY, SW[6:0], SW[16:10], HEX0);
 
-	initial begin
-		SW = 3'b000; #5;
-		SW = 3'b001; #5;
-		SW = 3'b010; #5;
-		SW = 3'b011; #5;
-		SW = 3'b100; #5;
-		SW = 3'b101; #5;
-		SW = 3'b110; #5;
-		SW = 3'b111; #5;
-	end
+initial begin
+    // KEY = 0
+    KEY = 1'b0;
+    SW = 4'b0000; #5;
+    SW = 4'b0001; #5;
+    SW = 4'b0010; #5;
+    SW = 4'b0011; #5;
+    SW = 4'b0100; #5;
+    SW = 4'b0101; #5;
+    SW = 4'b0110; #5;
+    SW = 4'b0111; #5;
+    SW = 4'b1000; #5;
+    SW = 4'b1001; #5;
+    SW = 4'b1010; #5;
+    SW = 4'b1011; #5;
+    SW = 4'b1100; #5;
+    SW = 4'b1101; #5;
+    SW = 4'b1110; #5;
+    SW = 4'b1111; #5;
+
+    // KEY = 1
+    KEY = 1'b1;
+    SW = 4'b0000; #5;
+    SW = 4'b0001; #5;
+    SW = 4'b0010; #5;
+    SW = 4'b0011; #5;
+    SW = 4'b0100; #5;
+    SW = 4'b0101; #5;
+    SW = 4'b0110; #5;
+    SW = 4'b0111; #5;
+    SW = 4'b1000; #5;
+    SW = 4'b1001; #5;
+    SW = 4'b1010; #5;
+    SW = 4'b1011; #5;
+    SW = 4'b1100; #5;
+    SW = 4'b1101; #5;
+    SW = 4'b1110; #5;
+    SW = 4'b1111; #5;
+end
+
+
 endmodule // TestBench1
