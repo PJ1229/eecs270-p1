@@ -6,7 +6,7 @@ module Selector(
 	output [6:0] F		  // Selector data outputs
 	);
 
-	SEL1 S[6:0](sel, A[6:0], B[6:0], F[6:0]);
+	SEL1 S[6:0](sel), A, B, F);
 
 //
 	

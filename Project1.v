@@ -4,9 +4,12 @@ module Project1(
 	input [17:0] SW,
 	output [6:0] LEDR,
 	output [6:0] HEX0
-	);
+);
 
 // instantiate selector module
-	Selector S(KEY, SW[6:0], SW[16:10], HEX0[6:0]);
+	wire [6:0] A = SW[6:0];
+	wire [16:10] B = SW[16:10];
+	
+    Selector S(KEY[3], A, B, LEDR);
 
 endmodule // Project1

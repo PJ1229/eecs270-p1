@@ -4,9 +4,11 @@ module SEL1(s, a, b, f);
 	input a, b;			// Selector data inputs
 	output f;				// Selector data output
 	
-	wire ab;
+	wire ns, ans, bs;
 
-	or a1(ab, a, b);
-	and o(f, s, ab);
+	not a1(ns, s);
+	and a2(ans, a, ns);
+	and a3(bs, b, s);
+	or o(f, ans, bs);
 	
 endmodule // SEL1
