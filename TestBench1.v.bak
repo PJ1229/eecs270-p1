@@ -1,52 +1,46 @@
-// File Name: TestBench1.v
-`timescale 1ns / 1ns
-module TestBench1();
-	reg [3:3] KEY;	// KEY = 0 --> SW[6:0],KEY = 1 --> SW[16:10]
-	reg [17:0] SW;
-	wire [6:0] LEDR;
-	wire [6:0] HEX0;
+`timescale 1ns/1ps
 
-	Selector S(KEY, SW[6:0], SW[16:10], HEX0);
+module tb;
 
-initial begin
-    // KEY = 0
-    KEY = 1'b0;
-    SW = 4'b0000; #5;
-    SW = 4'b0001; #5;
-    SW = 4'b0010; #5;
-    SW = 4'b0011; #5;
-    SW = 4'b0100; #5;
-    SW = 4'b0101; #5;
-    SW = 4'b0110; #5;
-    SW = 4'b0111; #5;
-    SW = 4'b1000; #5;
-    SW = 4'b1001; #5;
-    SW = 4'b1010; #5;
-    SW = 4'b1011; #5;
-    SW = 4'b1100; #5;
-    SW = 4'b1101; #5;
-    SW = 4'b1110; #5;
-    SW = 4'b1111; #5;
+    // Testbench signals
+    reg  [3:0] SW;
+    reg        KEY;
 
-    // KEY = 1
-    KEY = 1'b1;
-    SW = 4'b0000; #5;
-    SW = 4'b0001; #5;
-    SW = 4'b0010; #5;
-    SW = 4'b0011; #5;
-    SW = 4'b0100; #5;
-    SW = 4'b0101; #5;
-    SW = 4'b0110; #5;
-    SW = 4'b0111; #5;
-    SW = 4'b1000; #5;
-    SW = 4'b1001; #5;
-    SW = 4'b1010; #5;
-    SW = 4'b1011; #5;
-    SW = 4'b1100; #5;
-    SW = 4'b1101; #5;
-    SW = 4'b1110; #5;
-    SW = 4'b1111; #5;
-end
+    integer i;
 
+    // DUT instantiation (edit name/ports if needed)
+    // -----------------------------------------------
+    // example:
+    // my_module dut (
+    //     .SW(SW),
+    //     .KEY(KEY),
+    //     .OUT(OUT)
+    // );
+    // -----------------------------------------------
 
-endmodule // TestBench1
+    initial begin
+        // Initialize
+        SW  = 4'b0000;
+        KEY = 1'b0;
+        #5;
+
+        // Test KEY = 0
+        KEY = 1'b0;
+        for (i = 0; i < 16; i = i + 1) begin
+            SW = i[3:0];
+            #5;
+        end
+
+        // Test KEY = 1
+        KEY = 1'b1;
+        for (i = 0; i < 16; i = i + 1) begin
+            SW = i[3:0];
+            #5;
+        end
+
+        // End simulation
+        #10;
+        $stop;
+    end
+
+endmodule
