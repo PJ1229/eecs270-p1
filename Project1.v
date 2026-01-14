@@ -11,6 +11,6 @@ module Project1(
 	wire [16:10] B = SW[16:10];
 	
     Selector S1(KEY, A, B, LEDR);
-	Selector S2(KEY, A, B, HEX0);
+	Selector S2(KEY, ~A, ~B, HEX0);
 
 endmodule // Project1
